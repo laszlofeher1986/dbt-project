@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pl-exchange_rates",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "316b7df4-b8c3-93be-4753-46447b0d4f2e"
+  }
+}

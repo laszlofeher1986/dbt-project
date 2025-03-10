@@ -1,0 +1,329 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "b_exchange_rates",
+        "sourceLineageTag": "[bronze].[b_exchange_rates]",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "string",
+            "sourceColumn": "Date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_cd",
+            "dataType": "string",
+            "sourceColumn": "currency_cd",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_cd",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_nm",
+            "dataType": "string",
+            "sourceColumn": "currency_nm",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_nm",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "exchange_rt",
+            "dataType": "string",
+            "sourceColumn": "exchange_rt",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "exchange_rt",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "exchange_amt",
+            "dataType": "string",
+            "sourceColumn": "exchange_amt",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "exchange_amt",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "b_exchange_rates",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "bronze"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "g_exchange_rates",
+        "sourceLineageTag": "[gold].[g_exchange_rates]",
+        "columns": [
+          {
+            "name": "exchange_date",
+            "dataType": "dateTime",
+            "sourceColumn": "exchange_date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "exchange_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_cd",
+            "dataType": "string",
+            "sourceColumn": "currency_cd",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_cd",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_nm",
+            "dataType": "string",
+            "sourceColumn": "currency_nm",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_nm",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "exchange_amt",
+            "dataType": "decimal",
+            "sourceColumn": "exchange_amt",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "exchange_amt",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "g_exchange_rates",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "gold"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "my_first_model",
+        "sourceLineageTag": "[dbt].[my_first_model]",
+        "columns": [
+          {
+            "name": "example_column",
+            "dataType": "int64",
+            "sourceColumn": "example_column",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "example_column",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "my_first_model",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbt"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "s_exchange_rates",
+        "sourceLineageTag": "[silver].[s_exchange_rates]",
+        "columns": [
+          {
+            "name": "exchange_date",
+            "dataType": "dateTime",
+            "sourceColumn": "exchange_date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "exchange_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_cd",
+            "dataType": "string",
+            "sourceColumn": "currency_cd",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_cd",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "currency_nm",
+            "dataType": "string",
+            "sourceColumn": "currency_nm",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "currency_nm",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "exchange_amt",
+            "dataType": "decimal",
+            "sourceColumn": "exchange_amt",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "exchange_amt",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "s_exchange_rates",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "silver"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}
