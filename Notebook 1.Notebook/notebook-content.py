@@ -12,24 +12,8 @@
 
 # CELL ********************
 
-import subprocess
+!find / -name ".git" 2>/dev/null
 
-# Function to run dbt
-def run_dbt():
-    # Define the dbt command as a list
-    command = ["dbt", "run"]
-
-    # Execute the dbt run command
-    result = subprocess.run(command, capture_output=True, text=True)
-
-    # Check if the command executed successfully
-    if result.returncode == 0:
-        print("dbt run completed successfully")
-    else:
-        print(f"dbt run failed with error: {result.stderr}")
-
-# Execute the dbt run
-run_dbt()
 
 # METADATA ********************
 
