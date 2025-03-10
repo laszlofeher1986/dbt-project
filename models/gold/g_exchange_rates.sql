@@ -1,0 +1,1 @@
+SELECT * FROM {{ ref('s_exchange_rates') }}

@@ -1,0 +1,17 @@
+name: 'my_personal_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'my_personal_project'
+
+models:
+  my_personal_project:
+    bronze:
+      +schema: bronze
+      +materialized: table
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

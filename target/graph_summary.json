@@ -1,0 +1,1 @@
+{"_invocation_id": "2a694f01-6492-4345-9e1a-1f85baaeb121", "linked": {"0": {"name": "model.my_personal_project.b_exchange_rates", "type": "model", "succ": [2]}, "1": {"name": "model.my_personal_project.g_exchange_rates", "type": "model"}, "2": {"name": "model.my_personal_project.s_exchange_rates", "type": "model", "succ": [1]}}}
