@@ -12,7 +12,7 @@
 
 # CELL ********************
 
-!find / -name ".git" 2>/dev/null
+!find / -name dbt_project.yml 2>/dev/null
 
 
 # METADATA ********************
