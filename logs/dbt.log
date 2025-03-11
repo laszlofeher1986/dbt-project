@@ -4930,3 +4930,643 @@ USE [WH_LF];
 [0m13:44:06.172200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A64BA80650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A64B6D38C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A64BDD6840>]}
 [0m13:44:06.173215 [debug] [MainThread]: Flushing usage events
 [0m13:44:06.660532 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:38:37.289297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667BF3B1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667BF3B200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667BF3B110>]}
+
+
+============================== 13:38:37.317688 | cd82e51e-e182-41ae-8b95-d129fa53f41e ==============================
+[0m13:38:37.317688 [info ] [MainThread]: Running with dbt=1.9.2
+[0m13:38:37.318724 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\László Fehér\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Munka\\VSCode\\Projects\\WH-LF\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:38:43.006293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667E519190>]}
+[0m13:38:43.053639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667D60EA20>]}
+[0m13:38:43.053639 [info ] [MainThread]: Registered adapter: fabric=1.9.2
+[0m13:38:43.491861 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m13:38:45.973525 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:38:45.973525 [debug] [MainThread]: Partial parsing: updated file: my_personal_project://models\gold\g_exchange_rates.sql
+[0m13:38:46.146429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667FD734D0>]}
+[0m13:38:46.181691 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Munka\VSCode\Projects\WH-LF\target\manifest.json
+[0m13:38:46.227564 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Munka\VSCode\Projects\WH-LF\target\semantic_manifest.json
+[0m13:38:46.261941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026600221A60>]}
+[0m13:38:46.261941 [info ] [MainThread]: Found 3 models, 473 macros
+[0m13:38:46.262939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667FDD0CB0>]}
+[0m13:38:46.263964 [info ] [MainThread]: 
+[0m13:38:46.264939 [info ] [MainThread]: Concurrency: 4 threads (target='personal_project')
+[0m13:38:46.264939 [info ] [MainThread]: 
+[0m13:38:46.265938 [debug] [MainThread]: Acquiring new fabric connection 'master'
+[0m13:38:46.268939 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF'
+[0m13:38:46.282311 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:46.283316 [debug] [ThreadPool]: Using fabric connection "list_WH_LF"
+[0m13:38:46.283316 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF'
+[0m13:38:46.284314 [debug] [ThreadPool]: On list_WH_LF: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF"} */
+USE [WH_LF];
+    select  name as [schema]
+    from sys.schemas  
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:46.286313 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:46.286313 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:46.287312 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:46.288312 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF'
+[0m13:38:46.288312 [debug] [ThreadPool]: Using fabric connection "list_WH_LF"
+[0m13:38:46.291313 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:46.291767 [debug] [ThreadPool]: On list_WH_LF: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF"} */
+USE [WH_LF];
+    select  name as [schema]
+    from sys.schemas  
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:46.291767 [debug] [ThreadPool]: Using fabric connection "list_WH_LF"
+[0m13:38:46.292773 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:46.292773 [debug] [ThreadPool]: On list_WH_LF: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF"} */
+USE [WH_LF];
+    select  name as [schema]
+    from sys.schemas  
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:46.292773 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:46.292773 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:46.293772 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:56.332996 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:56.332996 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:56.333998 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:56.370584 [debug] [ThreadPool]: SQL status: OK in 10.000 seconds
+[0m13:38:56.371681 [debug] [ThreadPool]: On list_WH_LF: Close
+[0m13:38:56.372908 [debug] [ThreadPool]: SQL status: OK in 10.000 seconds
+[0m13:38:56.375061 [debug] [ThreadPool]: On list_WH_LF: Close
+[0m13:38:56.376056 [debug] [ThreadPool]: SQL status: OK in 10.000 seconds
+[0m13:38:56.378052 [debug] [ThreadPool]: On list_WH_LF: Close
+[0m13:38:56.381012 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF_silver'
+[0m13:38:56.387731 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:56.388732 [debug] [ThreadPool]: Using fabric connection "list_WH_LF_silver"
+[0m13:38:56.388732 [debug] [ThreadPool]: On list_WH_LF_silver: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF_silver"} */
+USE [WH_LF];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t 
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v 
+    )
+    select * from base
+    where [schema] like 'silver'
+    
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:56.388732 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:56.389736 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:56.390638 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF_gold'
+[0m13:38:56.394761 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:56.394761 [debug] [ThreadPool]: Using fabric connection "list_WH_LF_gold"
+[0m13:38:56.394761 [debug] [ThreadPool]: On list_WH_LF_gold: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF_gold"} */
+USE [WH_LF];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t 
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v 
+    )
+    select * from base
+    where [schema] like 'gold'
+    
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:56.395760 [debug] [ThreadPool]: Acquiring new fabric connection 'list_WH_LF_bronze'
+[0m13:38:56.395760 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:56.396946 [debug] [ThreadPool]: dbt-fabric
+[0m13:38:56.398124 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:56.398527 [debug] [ThreadPool]: Using fabric connection "list_WH_LF_bronze"
+[0m13:38:56.398527 [debug] [ThreadPool]: On list_WH_LF_bronze: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "connection_name": "list_WH_LF_bronze"} */
+USE [WH_LF];
+    with base as (
+      select
+        DB_NAME() as [database],
+        t.name as [name],
+        SCHEMA_NAME(t.schema_id) as [schema],
+        'table' as table_type
+      from sys.tables as t 
+      union all
+      select
+        DB_NAME() as [database],
+        v.name as [name],
+        SCHEMA_NAME(v.schema_id) as [schema],
+        'view' as table_type
+      from sys.views as v 
+    )
+    select * from base
+    where [schema] like 'bronze'
+    
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+  
+[0m13:38:56.398527 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:38:56.399533 [debug] [ThreadPool]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:56.761141 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:56.774907 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:56.838270 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:38:56.840269 [debug] [ThreadPool]: On list_WH_LF_gold: ROLLBACK
+[0m13:38:56.845142 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m13:38:56.846917 [debug] [ThreadPool]: On list_WH_LF_bronze: ROLLBACK
+[0m13:38:56.858633 [debug] [ThreadPool]: On list_WH_LF_gold: Close
+[0m13:38:56.859633 [debug] [ThreadPool]: On list_WH_LF_bronze: Close
+[0m13:38:57.513007 [debug] [ThreadPool]: fabric adapter: Connected to db: WH_LF
+[0m13:38:57.581804 [debug] [ThreadPool]: SQL status: OK in 1.000 seconds
+[0m13:38:57.585801 [debug] [ThreadPool]: On list_WH_LF_silver: ROLLBACK
+[0m13:38:57.586808 [debug] [ThreadPool]: On list_WH_LF_silver: Close
+[0m13:38:57.589436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266000CFCE0>]}
+[0m13:38:57.589436 [debug] [MainThread]: On master: COMMIT
+[0m13:38:57.594753 [debug] [Thread-7 (]: Began running node model.my_personal_project.b_exchange_rates
+[0m13:38:57.595963 [info ] [Thread-7 (]: 1 of 3 START sql table model bronze.b_exchange_rates ........................... [RUN]
+[0m13:38:57.597897 [debug] [Thread-7 (]: Acquiring new fabric connection 'model.my_personal_project.b_exchange_rates'
+[0m13:38:57.597897 [debug] [Thread-7 (]: Began compiling node model.my_personal_project.b_exchange_rates
+[0m13:38:57.603298 [debug] [Thread-7 (]: Writing injected SQL for node "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.604199 [debug] [Thread-7 (]: Began executing node model.my_personal_project.b_exchange_rates
+[0m13:38:57.625200 [debug] [Thread-7 (]: Applying DROP to: "WH_LF"."bronze"."b_exchange_rates__dbt_temp"
+[0m13:38:57.630464 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.631460 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "bronze"."b_exchange_rates__dbt_temp";');
+
+[0m13:38:57.631460 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m13:38:57.631460 [debug] [Thread-7 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:38:57.632460 [debug] [Thread-7 (]: fabric adapter: Connected to db: WH_LF
+[0m13:38:57.670101 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:38:57.676125 [debug] [Thread-7 (]: Applying DROP to: "WH_LF"."bronze"."b_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:38:57.678474 [debug] [Thread-7 (]: dbt-fabric
+[0m13:38:57.679476 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.680470 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'bronze'
+        and refs.referenced_entity_name = 'b_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:38:57.740420 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:38:57.744412 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.744412 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "bronze"."b_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:38:57.777071 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:38:57.790876 [debug] [Thread-7 (]: dbt-fabric
+[0m13:38:57.793876 [debug] [Thread-7 (]: Writing runtime sql for node "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.794878 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:38:57.794878 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+  
+    
+    
+    
+
+    EXEC('CREATE TABLE "WH_LF"."bronze"."b_exchange_rates__dbt_temp" AS SELECT 
+    Date,
+    [0] AS currency_cd,
+    [1] AS currency_nm,
+    [2] AS exchange_rt,
+    [3] AS exchange_amt
+FROM LH_LF.dbo.ld_exchange_rates 
+    OPTION (LABEL = ''dbt-fabric-dw'');
+');
+
+    
+
+  
+  
+[0m13:39:07.167296 [debug] [Thread-7 (]: SQL status: OK in 9.000 seconds
+[0m13:39:07.173589 [debug] [Thread-7 (]: Applying DROP to: "WH_LF"."bronze"."b_exchange_rates__dbt_backup"
+[0m13:39:07.173589 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:07.173589 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "bronze"."b_exchange_rates__dbt_backup";');
+
+[0m13:39:07.212282 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:39:07.217839 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:07.217839 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'bronze.b_exchange_rates', 'b_exchange_rates__dbt_backup'
+[0m13:39:07.840407 [debug] [Thread-7 (]: SQL status: OK in 1.000 seconds
+[0m13:39:07.843405 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:07.843405 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'bronze.b_exchange_rates__dbt_temp', 'b_exchange_rates'
+[0m13:39:08.121425 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:39:08.124247 [debug] [Thread-7 (]: Applying DROP to: "WH_LF"."bronze"."b_exchange_rates__dbt_backup"
+[0m13:39:08.125322 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:08.125322 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "bronze"."b_exchange_rates__dbt_backup";');
+
+[0m13:39:08.223059 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:39:08.227658 [debug] [Thread-7 (]: Applying DROP to: "WH_LF"."bronze"."b_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:39:08.227658 [debug] [Thread-7 (]: dbt-fabric
+[0m13:39:08.228789 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:08.228789 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'bronze'
+        and refs.referenced_entity_name = 'b_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:39:08.266264 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:39:08.267770 [debug] [Thread-7 (]: Using fabric connection "model.my_personal_project.b_exchange_rates"
+[0m13:39:08.268776 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.b_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "bronze"."b_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:39:08.301288 [debug] [Thread-7 (]: SQL status: OK in 0.000 seconds
+[0m13:39:08.311092 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: COMMIT
+[0m13:39:08.314989 [debug] [Thread-7 (]: On model.my_personal_project.b_exchange_rates: Close
+[0m13:39:08.317494 [debug] [Thread-7 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667D64C5F0>]}
+[0m13:39:08.317494 [info ] [Thread-7 (]: 1 of 3 OK created sql table model bronze.b_exchange_rates ...................... [[32mOK[0m in 10.72s]
+[0m13:39:08.318499 [debug] [Thread-7 (]: Finished running node model.my_personal_project.b_exchange_rates
+[0m13:39:08.319940 [debug] [Thread-9 (]: Began running node model.my_personal_project.s_exchange_rates
+[0m13:39:08.319940 [info ] [Thread-9 (]: 2 of 3 START sql table model silver.s_exchange_rates ........................... [RUN]
+[0m13:39:08.320949 [debug] [Thread-9 (]: Acquiring new fabric connection 'model.my_personal_project.s_exchange_rates'
+[0m13:39:08.320949 [debug] [Thread-9 (]: Began compiling node model.my_personal_project.s_exchange_rates
+[0m13:39:08.322947 [debug] [Thread-9 (]: Writing injected SQL for node "model.my_personal_project.s_exchange_rates"
+[0m13:39:08.323969 [debug] [Thread-9 (]: Began executing node model.my_personal_project.s_exchange_rates
+[0m13:39:08.328186 [debug] [Thread-9 (]: Applying DROP to: "WH_LF"."silver"."s_exchange_rates__dbt_temp"
+[0m13:39:08.328186 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:08.329221 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "silver"."s_exchange_rates__dbt_temp";');
+
+[0m13:39:08.329221 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m13:39:08.329221 [debug] [Thread-9 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:39:10.195948 [debug] [Thread-9 (]: fabric adapter: Connected to db: WH_LF
+[0m13:39:10.230765 [debug] [Thread-9 (]: SQL status: OK in 2.000 seconds
+[0m13:39:10.237269 [debug] [Thread-9 (]: Applying DROP to: "WH_LF"."silver"."s_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:39:10.238276 [debug] [Thread-9 (]: dbt-fabric
+[0m13:39:10.238276 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:10.238276 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'silver'
+        and refs.referenced_entity_name = 's_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:39:10.287477 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:10.291496 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:10.293493 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "silver"."s_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:39:10.326463 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:10.330177 [debug] [Thread-9 (]: dbt-fabric
+[0m13:39:10.331184 [debug] [Thread-9 (]: Writing runtime sql for node "model.my_personal_project.s_exchange_rates"
+[0m13:39:10.332185 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:10.333083 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+  
+    
+    
+    
+
+    EXEC('CREATE TABLE "WH_LF"."silver"."s_exchange_rates__dbt_temp" AS with 
+b_exchange_rates AS
+(
+    SELECT * FROM "WH_LF"."bronze"."b_exchange_rates"
+),
+
+cast_rows AS
+(
+    SELECT
+        CAST(Date AS DATE) AS exchange_date
+        ,currency_cd
+        ,currency_nm
+        ,CAST(CAST(exchange_rt AS DECIMAL(10,2)) AS INT) AS exchange_rt
+        ,CAST(exchange_amt AS DECIMAL(8,2)) AS exchange_amt
+    FROM b_exchange_rates
+),
+
+calc_exchange_rates AS
+(
+    SELECT
+        exchange_date
+        ,currency_cd
+        ,currency_nm
+        ,CAST(exchange_amt / exchange_rt AS DECIMAL(8,2)) AS exchange_amt
+    FROM cast_rows
+)
+
+SELECT
+*
+FROM calc_exchange_rates 
+    OPTION (LABEL = ''dbt-fabric-dw'');
+');
+
+    
+
+  
+  
+[0m13:39:15.411671 [debug] [Thread-9 (]: SQL status: OK in 5.000 seconds
+[0m13:39:15.414643 [debug] [Thread-9 (]: Applying DROP to: "WH_LF"."silver"."s_exchange_rates__dbt_backup"
+[0m13:39:15.415678 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:15.415678 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "silver"."s_exchange_rates__dbt_backup";');
+
+[0m13:39:15.451466 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:15.455366 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:15.455366 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'silver.s_exchange_rates', 's_exchange_rates__dbt_backup'
+[0m13:39:15.751302 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:15.754300 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:15.754300 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'silver.s_exchange_rates__dbt_temp', 's_exchange_rates'
+[0m13:39:16.046076 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:16.051719 [debug] [Thread-9 (]: Applying DROP to: "WH_LF"."silver"."s_exchange_rates__dbt_backup"
+[0m13:39:16.052609 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:16.053644 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "silver"."s_exchange_rates__dbt_backup";');
+
+[0m13:39:16.149657 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:16.154596 [debug] [Thread-9 (]: Applying DROP to: "WH_LF"."silver"."s_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:39:16.155398 [debug] [Thread-9 (]: dbt-fabric
+[0m13:39:16.156440 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:16.156440 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'silver'
+        and refs.referenced_entity_name = 's_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:39:16.192356 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:16.194493 [debug] [Thread-9 (]: Using fabric connection "model.my_personal_project.s_exchange_rates"
+[0m13:39:16.194493 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.s_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "silver"."s_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:39:16.230656 [debug] [Thread-9 (]: SQL status: OK in 0.000 seconds
+[0m13:39:16.231652 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: COMMIT
+[0m13:39:16.232717 [debug] [Thread-9 (]: On model.my_personal_project.s_exchange_rates: Close
+[0m13:39:16.232717 [debug] [Thread-9 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026600A0D670>]}
+[0m13:39:16.233659 [info ] [Thread-9 (]: 2 of 3 OK created sql table model silver.s_exchange_rates ...................... [[32mOK[0m in 7.91s]
+[0m13:39:16.234623 [debug] [Thread-9 (]: Finished running node model.my_personal_project.s_exchange_rates
+[0m13:39:16.235624 [debug] [Thread-8 (]: Began running node model.my_personal_project.g_exchange_rates
+[0m13:39:16.236638 [info ] [Thread-8 (]: 3 of 3 START sql table model gold.g_exchange_rates ............................. [RUN]
+[0m13:39:16.237144 [debug] [Thread-8 (]: Acquiring new fabric connection 'model.my_personal_project.g_exchange_rates'
+[0m13:39:16.237144 [debug] [Thread-8 (]: Began compiling node model.my_personal_project.g_exchange_rates
+[0m13:39:16.240170 [debug] [Thread-8 (]: Writing injected SQL for node "model.my_personal_project.g_exchange_rates"
+[0m13:39:16.241190 [debug] [Thread-8 (]: Began executing node model.my_personal_project.g_exchange_rates
+[0m13:39:16.247782 [debug] [Thread-8 (]: Applying DROP to: "WH_LF"."gold"."g_exchange_rates__dbt_temp"
+[0m13:39:16.248797 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:16.248797 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "gold"."g_exchange_rates__dbt_temp";');
+
+[0m13:39:16.249809 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m13:39:16.250808 [debug] [Thread-8 (]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=xe6b73af6wce5cpkwv3dpk3vzi-nuzugzcxf2hu7lf7hqp6dbu3wq.datawarehouse.fabric.microsoft.com;Database=WH_LF;Pooling=true;SQL_ATTR_TRACE=SQL_OPT_TRACE_OFF;encrypt=Yes;TrustServerCertificate=No;APP=dbt-fabric/1.9.2;ConnectRetryCount=3;ConnectRetryInterval=10
+[0m13:39:16.922087 [debug] [Thread-8 (]: fabric adapter: Connected to db: WH_LF
+[0m13:39:16.957614 [debug] [Thread-8 (]: SQL status: OK in 1.000 seconds
+[0m13:39:16.960626 [debug] [Thread-8 (]: Applying DROP to: "WH_LF"."gold"."g_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:39:16.961710 [debug] [Thread-8 (]: dbt-fabric
+[0m13:39:16.962626 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:16.962626 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'gold'
+        and refs.referenced_entity_name = 'g_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:39:17.013056 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:17.015163 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:17.015163 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "gold"."g_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:39:17.050561 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:17.052554 [debug] [Thread-8 (]: dbt-fabric
+[0m13:39:17.053554 [debug] [Thread-8 (]: Writing runtime sql for node "model.my_personal_project.g_exchange_rates"
+[0m13:39:17.055551 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:17.055551 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+  
+    
+    
+    
+
+    EXEC('CREATE TABLE "WH_LF"."gold"."g_exchange_rates__dbt_temp" AS /* load the silver layer*/
+SELECT * FROM "WH_LF"."silver"."s_exchange_rates" 
+    OPTION (LABEL = ''dbt-fabric-dw'');
+');
+
+    
+
+  
+  
+[0m13:39:17.825740 [debug] [Thread-8 (]: SQL status: OK in 1.000 seconds
+[0m13:39:17.827363 [debug] [Thread-8 (]: Applying DROP to: "WH_LF"."gold"."g_exchange_rates__dbt_backup"
+[0m13:39:17.827363 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:17.827363 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "gold"."g_exchange_rates__dbt_backup";');
+
+[0m13:39:17.863706 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:17.867303 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:17.867303 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'gold.g_exchange_rates', 'g_exchange_rates__dbt_backup'
+[0m13:39:18.155828 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:18.159340 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:18.159340 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+USE [WH_LF];
+      EXEC sp_rename 'gold.g_exchange_rates__dbt_temp', 'g_exchange_rates'
+[0m13:39:18.455561 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:18.459027 [debug] [Thread-8 (]: Applying DROP to: "WH_LF"."gold"."g_exchange_rates__dbt_backup"
+[0m13:39:18.459027 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:18.460032 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+      
+    USE [WH_LF];
+    EXEC('DROP table IF EXISTS "gold"."g_exchange_rates__dbt_backup";');
+
+[0m13:39:18.563334 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:18.567217 [debug] [Thread-8 (]: Applying DROP to: "WH_LF"."gold"."g_exchange_rates__dbt_temp__dbt_tmp_vw"
+[0m13:39:18.567826 [debug] [Thread-8 (]: dbt-fabric
+[0m13:39:18.568829 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:18.568829 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+        USE [WH_LF];
+        select
+            sch.name as schema_name,
+            obj.name as view_name
+        from sys.sql_expression_dependencies refs
+        inner join sys.objects obj
+        on refs.referencing_id = obj.object_id
+        inner join sys.schemas sch
+        on obj.schema_id = sch.schema_id
+        where refs.referenced_database_name = 'WH_LF'
+        and refs.referenced_schema_name = 'gold'
+        and refs.referenced_entity_name = 'g_exchange_rates__dbt_temp__dbt_tmp_vw'
+        and refs.referencing_class = 1
+        and obj.type = 'V'
+        
+    OPTION (LABEL = 'dbt-fabric-dw');
+
+      
+[0m13:39:18.605298 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:18.608645 [debug] [Thread-8 (]: Using fabric connection "model.my_personal_project.g_exchange_rates"
+[0m13:39:18.609640 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "my_personal_project", "target_name": "personal_project", "node_id": "model.my_personal_project.g_exchange_rates"} */
+
+      
+      
+    
+    USE [WH_LF];
+    EXEC('DROP view IF EXISTS "gold"."g_exchange_rates__dbt_temp__dbt_tmp_vw";');
+
+[0m13:39:18.641992 [debug] [Thread-8 (]: SQL status: OK in 0.000 seconds
+[0m13:39:18.643014 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: COMMIT
+[0m13:39:18.644012 [debug] [Thread-8 (]: On model.my_personal_project.g_exchange_rates: Close
+[0m13:39:18.645012 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cd82e51e-e182-41ae-8b95-d129fa53f41e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266002B2A20>]}
+[0m13:39:18.645012 [info ] [Thread-8 (]: 3 of 3 OK created sql table model gold.g_exchange_rates ........................ [[32mOK[0m in 2.41s]
+[0m13:39:18.646013 [debug] [Thread-8 (]: Finished running node model.my_personal_project.g_exchange_rates
+[0m13:39:18.649539 [debug] [MainThread]: On master: COMMIT
+[0m13:39:18.650534 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:39:18.650534 [debug] [MainThread]: Connection 'list_WH_LF' was properly closed.
+[0m13:39:18.650534 [debug] [MainThread]: Connection 'list_WH_LF' was properly closed.
+[0m13:39:18.650534 [debug] [MainThread]: Connection 'list_WH_LF' was properly closed.
+[0m13:39:18.650534 [debug] [MainThread]: Connection 'list_WH_LF_silver' was properly closed.
+[0m13:39:18.651533 [debug] [MainThread]: Connection 'list_WH_LF_gold' was properly closed.
+[0m13:39:18.651533 [debug] [MainThread]: Connection 'list_WH_LF_bronze' was properly closed.
+[0m13:39:18.651533 [debug] [MainThread]: Connection 'model.my_personal_project.b_exchange_rates' was properly closed.
+[0m13:39:18.652534 [debug] [MainThread]: Connection 'model.my_personal_project.s_exchange_rates' was properly closed.
+[0m13:39:18.652534 [debug] [MainThread]: Connection 'model.my_personal_project.g_exchange_rates' was properly closed.
+[0m13:39:18.653536 [info ] [MainThread]: 
+[0m13:39:18.654535 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 32.39 seconds (32.39s).
+[0m13:39:18.655536 [debug] [MainThread]: Command end result
+[0m13:39:18.750791 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Munka\VSCode\Projects\WH-LF\target\manifest.json
+[0m13:39:18.752757 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Munka\VSCode\Projects\WH-LF\target\semantic_manifest.json
+[0m13:39:18.759274 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Munka\VSCode\Projects\WH-LF\target\run_results.json
+[0m13:39:18.760281 [info ] [MainThread]: 
+[0m13:39:18.760281 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:39:18.761280 [info ] [MainThread]: 
+[0m13:39:18.762279 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m13:39:18.762279 [debug] [MainThread]: Command `dbt run` succeeded at 13:39:18.762279 after 41.81 seconds
+[0m13:39:18.763280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667DCDD730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026600171490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002667D8F23F0>]}
+[0m13:39:18.763280 [debug] [MainThread]: Flushing usage events
+[0m13:39:19.280122 [debug] [MainThread]: An error was encountered while trying to flush usage events
